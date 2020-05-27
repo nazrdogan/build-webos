@@ -17,3 +17,11 @@ jobs:
       run:  sudo scripts/prerequisites.sh
     - name: cpu cores
       run: cat /proc/cpuinfo | grep "cpu cores" | uniq
+    - name: cpu cores
+      run: ./mcf -p  1 -b 1 raspberrypi4
+    - name: source oe-init-build-env
+      run: source oe-init-build-env
+    - name: bitbake webos-image
+      run: bitbake webos-image
+      
+      
