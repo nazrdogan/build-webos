@@ -19,9 +19,8 @@ jobs:
       run: cat /proc/cpuinfo | grep "cpu cores" | uniq
     - name: raspberrypi4
       run: ./mcf -p  1 -b 1 raspberrypi4
-    - name: source oe-init-build-env
-      run: source oe-init-build-env
-    - name: bitbake webos-image
-      run: bitbake webos-image
+    - name: make webos-image
+      run: make webos-image
+   
       
       
